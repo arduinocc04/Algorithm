@@ -1,0 +1,10 @@
+.vscode/
+*.exe
+*.json
+BOJ/.vs/
+Tester/data/
+Tester/result.txt
+Tester/err.txt
+*.out
+.idea/
+.vs/
