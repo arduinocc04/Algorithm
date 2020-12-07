@@ -8,3 +8,6 @@ Tester/err.txt
 *.out
 .idea/
 .vs/
+*.ans
+*.in
+*
