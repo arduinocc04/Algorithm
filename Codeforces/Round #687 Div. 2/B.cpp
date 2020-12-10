@@ -1,3 +1,4 @@
+//B.cpp
 #include <cstdio>
 
 int T, n, k, c[100010];

@@ -1,3 +1,4 @@
+//B.cpp
 #include <cstdio>
 
 int T, n;
@@ -10,8 +11,6 @@ int main() {
         while(j < n) {
             j += i+1;
             i++;
-            //printf("j: %d", j);
-            //printf(" i: %d\n", i);
         }
         if(n == j-1) {
             printf("%d\n", i+1);

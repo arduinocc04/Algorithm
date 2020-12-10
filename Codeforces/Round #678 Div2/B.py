@@ -1,3 +1,4 @@
+#B.py
 import sys
 input = sys.stdin.readline
 #0도 가능
