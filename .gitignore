@@ -10,4 +10,4 @@ Tester/err.txt
 .vs/
 *.ans
 *.in
-*
+!/*/*
