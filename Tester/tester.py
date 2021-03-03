@@ -13,7 +13,7 @@ for i in tInputs:
         #os.system(program + f' < {i} > ' + os.path.join(os.getcwd(), 'Tester', 'result.txt'))
         with open(os.path.join(os.getcwd(), 'Tester', 'result.txt'), 'w') as f:
             subprocess.call(program + f' < {os.path.join(dir_, i)} ', stdout=f, shell=True)
-        with open(os.path.join(dir_, i.split('.')[0] + '.ans'), 'r') as f:
+        with open(os.path.join(dir_, i.split('.')[0] + '.out'), 'r') as f:
             with open(os.path.join(os.getcwd(), 'Tester', 'result.txt'), 'r') as w:
                 a,b = w.readline().rstrip(), f.readline().rstrip()
                 tmp = i.split('.')[0]
