@@ -1,19 +1,23 @@
 #include <cstdio>
 
-int n;
-char picture[110][110];
-bool visited[110][110];
-int d[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-void dfs(int x, int y) {
+int n, map[110][110], visited[110][110], groups1, groups2, d[][2] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
+void calc1(int x, int y, int target, int depth=0) {
+    if(x < 0 || x >= n || y < 0 || y >= n || visited[x][y] || map[x][y] != target) return;
     visited[x][y] = true;
-    int tmpX, tmpY;
     for(int i = 0; i < 4; i++) {
-        tmpX = x + d[i][0];
-        tmpY = y + d[i][1];
-        if(0 <= tmpX && tmpX < n && 0 <= tmpY && tmpY < n && !visited[tmpX][tmpY] && picture[tmpX][tmpY] == picture[x][y]) {
-            dfs(tmpX, tmpY);
-        }
+        calc1(x + d[i][0], y + d[i][1], target, depth+1);
     }
+    if(depth == 0) groups1++;
+    return;
+}
+void calc2(int x, int y, int target, int depth=0) {
+    if(x < 0 || x >= n || y < 0 || y >= n || visited[x][y] || map[x][y] != target) return;
+    visited[x][y] = true;
+    for(int i = 0; i < 4; i++) {
+        calc2(x + d[i][0], y + d[i][1], target, depth+1);
+    }
+    if(depth == 0) groups2++;
     return;
 }
 
@@ -21,46 +25,20 @@ int main() {
     scanf("%d", &n);
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
-            scanf("%c", &picture[i][j]); 
-            visited[i][j] = false;
+            scanf(" %c", &map[i][j]);
         }
     }
-    int cnt = 0;
-    bool flag;
-    while(true) {
-        flag = true;
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j < n; j++) {
-                if(!visited[i][j]) {
-                    flag = false;
-                    dfs(i, j);
-                    cnt++;
-                }
-            }
-        }
-        if(flag) break;
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) calc1(i, j, map[i][j]);
     }
-    printf("%d", cnt);
-    cnt = 0;
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
-            if(picture[i][j] == 'R') picture[i][j] = 'G';
+            if(map[i][j] == 'R') map[i][j] = 'G';
             visited[i][j] = false;
         }
     }
-    while(true) {
-        flag = true;
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j < n; j++) {
-                if(!visited[i][j]) {
-                    flag = false;
-                    dfs(i, j);
-                    cnt++;
-                }
-            }
-        }
-        if(flag) break;
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) calc2(i, j, map[i][j]);
     }
-    printf(" %d", cnt);
-
+    printf("%d %d\n", groups1, groups2);
 }
