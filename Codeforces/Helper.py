@@ -10,7 +10,7 @@ int main() {
     return 0;
 }
 """
-dir_ = os.path.join(os.getcwd(), 'Codeforces', input('input round name! >>>'))
+dir_ = os.path.join(os.getcwd(), input('input round name! >>>'))
 if not os.path.isdir(dir_):
     os.mkdir(dir_)
 for i in 'ABCDEF':
