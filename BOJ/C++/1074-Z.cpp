@@ -2,20 +2,31 @@
 
 int n, r, c, cnt;
 
-void calc(int sX, int sY, int eX, int eY) {
-    if(sX == eX && sY == eY) {
-        cnt++;
-        if(sY == r && sX == c) printf("%d", cnt);
-        return;
+int pow(int a, int b) {
+    int res = 1;
+    for(int i = 0; i < b; i++) res *= a;
+    return res;
+}
+
+int find(int r, int c, int n) {
+    if(n == 0) return 0;
+    int tmp = pow(2, n-1);
+    bool flag1 = r >= tmp, flag2 = c >= tmp;
+    if(!flag1 && !flag2) {
+        return 0 + find(r, c, n - 1);
     }
-    calc(sX, sY, eX/2+1, eY/2+1); //0 0 1 1
-    calc(eX/2+1, sY, eX, eY/2+1); // 1 0 3 
-    calc(sX, eY/2+1, eX/2+1, eY);
-    calc(eX/2+1, eY/2+1, eX, eY);
-    return;
+    else if(!flag1 && flag2) {
+        return tmp*tmp + find(r, c - tmp, n - 1);
+    }
+    else if(flag1 && !flag2) {
+        return tmp*tmp*2 + find(r - tmp, c, n - 1);
+    }
+    else {
+        return tmp*tmp*3 + find(r - tmp, c - tmp, n - 1);
+    }
 }
 
 int main() {
     scanf("%d %d %d", &n, &r, &c);
-    calc(0, 0, (1<<n)-1, (1<<n)-1);
+    printf("%d", find(r, c, n));
 }
