@@ -1,31 +1,100 @@
-WA: 0 / expect: 1 3 6 8 9 ans: 
-WA: 1 / expect: 1 9 ans: 
-WA: 10 / expect: 2 2 ans: 
-WA: 11 / expect: 4 ans: 
-WA: 12 / expect: 1 ans: 
-WA: 13 / expect: 1 ans: 
-WA: 14 / expect: 2 ans: 
-WA: 15 / expect: 7 8 ans: 
-WA: 16 / expect: 1 ans: 
-WA: 17 / expect: 4 ans: 
-WA: 18 / expect: 5 8 ans: 
-WA: 19 / expect: 2 ans: 
-WA: 2 / expect: 1 6 7 7 ans: 
-WA: 20 / expect: 1 1 1 4 6 ans: 
-WA: 21 / expect: 4 4 5 5 6 7 ans: 
-WA: 22 / expect: 8 ans: 
-WA: 23 / expect: 1 2 2 3 3 5 5 9 ans: 
-WA: 24 / expect: 1 1 2 ans: 
-WA: 25 / expect: 3 3 3 4 6 7 ans: 
-WA: 26 / expect: 1 2 4 4 5 ans: 
-WA: 27 / expect: 1 4 4 5 8 ans: 
-WA: 28 / expect: 5 8 ans: 
-WA: 29 / expect: 2 2 5 5 ans: 
-WA: 3 / expect: 2 5 8 ans: 
-WA: 30 / expect: 2 ans: 
-WA: 31 / expect: 1 ans: 
-WA: 32 / expect: 3 ans: 
-WA: 33 / expect: 1 2 ans: 
-WA: 34 / expect: 2 4 ans: 
-WA: 35 / expect: 1 2 5 ans: 
-WA: 36 / expect: 3 ans: 
+WA: 36 / expect: NO ans: 
+WA: 58 / expect: NO ans: 
+WA: 50 / expect: NO ans: 
+WA: 0 / expect: NO ans: 
+WA: 42 / expect: NO ans: 
+WA: 84 / expect: NO ans: 
+WA: 71 / expect: NO ans: 
+WA: 51 / expect: NO ans: 
+WA: 77 / expect: NO ans: 
+WA: 2 / expect: NO ans: 
+WA: 41 / expect: NO ans: 
+WA: 46 / expect: NO ans: 
+WA: 78 / expect: NO ans: 
+WA: 23 / expect: NO ans: 
+WA: 18 / expect: NO ans: 
+WA: 34 / expect: NO ans: 
+WA: 25 / expect: NO ans: 
+WA: 29 / expect: NO ans: 
+WA: 37 / expect: NO ans: 
+WA: 8 / expect: NO ans: 
+WA: 89 / expect: NO ans: 
+WA: 24 / expect: NO ans: 
+WA: 73 / expect: NO ans: 
+WA: 13 / expect: NO ans: 
+WA: 26 / expect: NO ans: 
+WA: 99 / expect: NO ans: 
+WA: 14 / expect: NO ans: 
+WA: 40 / expect: NO ans: 
+WA: 61 / expect: NO ans: 
+WA: 5 / expect: NO ans: 
+WA: 93 / expect: NO ans: 
+WA: 9 / expect: NO ans: 
+WA: 53 / expect: NO ans: 
+WA: 32 / expect: NO ans: 
+WA: 67 / expect: NO ans: 
+WA: 31 / expect: NO ans: 
+WA: 38 / expect: NO ans: 
+WA: 79 / expect: NO ans: 
+WA: 86 / expect: NO ans: 
+WA: 72 / expect: NO ans: 
+WA: 96 / expect: NO ans: 
+WA: 97 / expect: NO ans: 
+WA: 70 / expect: NO ans: 
+WA: 3 / expect: NO ans: 
+WA: 98 / expect: NO ans: 
+WA: 39 / expect: NO ans: 
+WA: 33 / expect: NO ans: 
+WA: 83 / expect: NO ans: 
+WA: 22 / expect: NO ans: 
+WA: 17 / expect: NO ans: 
+WA: 20 / expect: NO ans: 
+WA: 59 / expect: NO ans: 
+WA: 44 / expect: NO ans: 
+WA: 68 / expect: NO ans: 
+WA: 1 / expect: NO ans: 
+WA: 64 / expect: NO ans: 
+WA: 80 / expect: NO ans: 
+WA: 81 / expect: NO ans: 
+WA: 63 / expect: NO ans: 
+WA: 75 / expect: NO ans: 
+WA: 60 / expect: NO ans: 
+WA: 55 / expect: NO ans: 
+WA: 12 / expect: NO ans: 
+WA: 16 / expect: NO ans: 
+WA: 65 / expect: NO ans: 
+WA: 66 / expect: NO ans: 
+WA: 54 / expect: NO ans: 
+WA: 82 / expect: NO ans: 
+WA: 85 / expect: NO ans: 
+WA: 21 / expect: NO ans: 
+WA: 76 / expect: NO ans: 
+WA: 87 / expect: NO ans: 
+WA: 94 / expect: NO ans: 
+WA: 10 / expect: NO ans: 
+WA: 47 / expect: NO ans: 
+WA: 88 / expect: NO ans: 
+WA: 52 / expect: NO ans: 
+WA: 11 / expect: NO ans: 
+WA: 15 / expect: NO ans: 
+WA: 74 / expect: NO ans: 
+WA: 43 / expect: NO ans: 
+WA: 19 / expect: NO ans: 
+WA: 95 / expect: NO ans: 
+WA: 45 / expect: NO ans: 
+WA: 30 / expect: NO ans: 
+WA: 92 / expect: NO ans: 
+WA: 48 / expect: NO ans: 
+WA: 4 / expect: NO ans: 
+WA: 6 / expect: NO ans: 
+WA: 62 / expect: NO ans: 
+WA: 35 / expect: NO ans: 
+WA: 57 / expect: NO ans: 
+WA: 56 / expect: NO ans: 
+WA: 91 / expect: NO ans: 
+WA: 28 / expect: NO ans: 
+WA: 49 / expect: NO ans: 
+WA: 69 / expect: NO ans: 
+WA: 7 / expect: NO ans: 
+WA: 27 / expect: NO ans: 
+WA: 90 / expect: NO ans: 

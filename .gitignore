@@ -5,6 +5,7 @@ Contests/*/*
 Implementation/*
 KOI Judge/*/*
 Tester/*
+Atcoder/*/*
 !*.cpp
 !*.py
 !*.cc
