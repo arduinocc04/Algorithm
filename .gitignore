@@ -11,3 +11,4 @@ Tester/*
 !*.h
 !*.py3
 !*.c
+.vscode/
