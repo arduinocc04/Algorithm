@@ -1,13 +1,13 @@
-.vscode/
-*.exe
-*.json
-BOJ/.vs/
-Tester/data/
-Tester/result.txt
-Tester/err.txt
-*.out
-.idea/
-.vs/
-*.ans
-*.in
-!/*/*
+Algospot/*
+BOJ/*/*
+Codeforces/*/*
+Contests/*/*
+Implementation/*
+KOI Judge/*/*
+Tester/*
+!*.cpp
+!*.py
+!*.cc
+!*.h
+!*.py3
+!*.c
