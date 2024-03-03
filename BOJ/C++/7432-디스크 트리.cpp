@@ -63,7 +63,7 @@ bool compare(const Node * const a, const Node * const b) {
 
 void print_dfs_impl(Node * const now, int depth) {
     for(int i = 0; i < depth; ++i)
-        std::cout << "--";
+        std::cout << " ";
 
     std::cout << now->data << "\n";
     std::sort(now->next.begin(), now->next.end(), compare);
@@ -87,18 +87,36 @@ int main() {
 
     Trie trie{};
 
-    int info_cnt;
-    std::cin >> info_cnt;
+    int dir_cnt;
+    std::cin >> dir_cnt;
 
-    int depth;
+    std::string string_buf;
     std::vector<std::string> buffer;
-    for(int i = 0; i < info_cnt; ++i) {
-        std::cin >> depth;
+    for(int i = 0; i < dir_cnt; ++i) {
+        std::cin >> string_buf;
+
+        std::vector<int> inverse_slash_idxes;
+        for(int j = 0; j < string_buf.size(); ++j)
+            if(string_buf[j] == '\\')
+                inverse_slash_idxes.push_back(j);
+        const int depth = inverse_slash_idxes.size() + 1;
+
         buffer.clear();
         buffer.resize(depth);
 
-        for(int j = 0; j < depth; ++j)
-            std::cin >> buffer[j];
+        if(depth == 1) {
+            buffer[0] = string_buf;
+        }
+        else {
+            buffer[0] = string_buf.substr(0, inverse_slash_idxes[0]);
+        }
+
+        for(int j = 1; j < depth - 1; ++j) {
+            buffer[j] = string_buf.substr(inverse_slash_idxes[j - 1] + 1, inverse_slash_idxes[j] - inverse_slash_idxes[j - 1] - 1);
+        }
+
+        if(depth != 1)
+            buffer[depth - 1] = string_buf.substr(inverse_slash_idxes[inverse_slash_idxes.size() - 1] + 1);
 
         trie.append(buffer);
     }
