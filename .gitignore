@@ -12,4 +12,5 @@ Atcoder/*/*
 !*.h
 !*.py3
 !*.c
+!*.rs
 .vscode/
